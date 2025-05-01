@@ -139,7 +139,10 @@ export default function FametonicLanding() {
               <h1 className="text-4xl sm:text-3xl font-400 leading-tight mb-4">
                 Want to Turn Social Media Into a Profitable Career?
               </h1>
-              <h2 className="text-4xl text-cyan-400 font-medium mb-8">
+              <h2
+                className="text-4xl text-cyan-400 font-medium mb-8"
+                style={{ filter: "drop-shadow(2px 2px 2px #FC004E)" }}
+              >
                 Discover your way to success with Fametonic:
               </h2>
 
@@ -171,7 +174,10 @@ export default function FametonicLanding() {
               </ul>
 
               <div className="space-y-2">
-                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white font-medium py-3 px-8 rounded-full flex items-center gap-2 hover:opacity-90 transition-opacity w-auto justify-center">
+                <button
+                  className="w-[70%] h-[40px] bg-gradient-to-r !bg-red-500 text-white font-medium py-3 px-8 rounded flex items-center gap-2 hover:opacity-90 transition-opacity w-auto justify-center"
+                  style={{ filter: "drop-shadow(2px 2px 2px #00E7F9)" }}
+                >
                   GET STARTED <ArrowRight className="h-4 w-4 ml-1" />
                 </button>
                 <p className="text-xs text-gray-400 text-left">
@@ -189,11 +195,11 @@ export default function FametonicLanding() {
             </div>
 
             {/* Right Column - Overlapping Image */}
-            <div className="hidden md:block absolute  right-0 top-0 w-1.25/2 h-full items-center justify-end pr-16 pointer-events-none">
+            <div className="hidden md:block absolute  right-0 top-0 w-1.5/2 h-full items-center justify-end pr-16 pointer-events-none">
               <Image
                 src="/fametonic-app.png"
                 alt="Fametonic App"
-                width={800}
+                width={1000}
                 height={800}
                 className="w-auto max-h-[100%]"
               />
