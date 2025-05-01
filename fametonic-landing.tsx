@@ -22,12 +22,11 @@ export default function FametonicLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       {/* Promotional Banner */}
-      <div className="w-full bg-gradient-to-r from-pink-600 to-pink-500 py-2 px-4 text-center">
+      <div className="w-full bg-gradient-to-r from-[#FC004E] to-[#10CBE0] py-2 px-4 text-center">
         <div className="flex items-center justify-center gap-2">
-          <span className="text-lg">🎉</span>
-          <span className="font-medium text-sm md:text-base">
-            FRESH BEGINNINGS SALE: Extra 25% OFF, Limited Spots - start your
-            journey today!
+          <span className="font-extrabold text-[16px] leading-[100%] tracking-[0%] text-center align-middle font-[Figtree]">
+            <span className="text-[#00E7F9]">FRESH BEGINNINGS SALE:</span> Extra
+            25% OFF, Limited Spots - start your journey today!
           </span>
         </div>
       </div>
@@ -35,18 +34,20 @@ export default function FametonicLanding() {
       {/* Main Content */}
       <div className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
-          {/* Navigation */}
-          <nav className="flex justify-between items-center mb-6 md:mb-16">
-            <div className="text-2xl font-bold">
+          <nav className="flex items-center justify-between px-6 md:px-16 mb-6 md:mb-16">
+            {/* Logo */}
+            <div className="text-2xl flex font-bold">
               <Image
                 src="/fametonic-logo-final.png"
                 alt="Fametonic"
-                width={120}
-                height={40}
+                width={173.12}
+                height={74}
                 className="h-8 md:h-12 w-auto"
               />
             </div>
-            <div className="md:flex gap-6 hidden">
+
+            {/* Nav links (desktop only) */}
+            <div className="hidden md:flex gap-6">
               <a href="#" className="text-gray-300 hover:text-white">
                 About us
               </a>
@@ -54,18 +55,17 @@ export default function FametonicLanding() {
                 Contact
               </a>
             </div>
-            <button className="md:hidden text-white">
-              <Menu size={24} />
-            </button>
+
+            {/* Mobile menu button (hidden on desktop) */}
+            <div className="flex md:hidden">
+              <button className="text-white">
+                <Menu size={24} />
+              </button>
+            </div>
           </nav>
 
-          {/* Hero Section - Mobile Layout */}
           <div className="md:hidden">
-            {/* Phone Image with glowing effect */}
             <div className="relative flex justify-center mb-6">
-              {/* Glowing Ring Effect */}
-
-              {/* Phone Image */}
               <Image
                 src="/fametonic-app.png"
                 alt="Fametonic App"
@@ -74,63 +74,6 @@ export default function FametonicLanding() {
                 className="relative z-10"
               />
             </div>
-
-            {/* Text Content */}
-            {/* <div>
-              <h1 className="text-2xl font-bold leading-tight mb-2">
-                Want to Turn Social Media Into a Profitable Career?
-              </h1>
-              <h2 className="text-xl text-cyan-400 font-medium mb-4">
-                Discover your way to success with Fametonic:
-              </h2>
-
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-2">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
-                  <span className="text-sm">
-                    Start growing your influence right away—no waiting required!
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
-                  <span className="text-sm">
-                    Create viral TikToks and Reels step by step with
-                    easy-to-follow formats
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
-                  <span className="text-sm">
-                    Use a Personal AI Writer to boost your content
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
-                  <span className="text-sm">
-                    Learn from expert-led courses designed for aspiring
-                    influencers
-                  </span>
-                </li>
-              </ul>
-
-              <p className="text-xs text-gray-400 mb-8">
-                By clicking "Get Started" you agree with Terms and Conditions,
-                Privacy Policy, Subscription Agreement.
-                <br />
-                <span className="block mt-1">
-                  Fametonic © 2023 Rights Reserved
-                </span>
-              </p>
-
-              <div className="space-y-2">
-                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white font-medium py-3 px-8 rounded-full flex items-center gap-2 hover:opacity-90 transition-opacity w-full justify-center">
-                  GET STARTED <ArrowRight className="h-4 w-4 ml-1" />
-                </button>
-                <p className="text-xs text-cyan-400 text-center">
-                  1-minute quiz for personalized insights
-                </p>
-              </div>
-            </div> */}
           </div>
 
           <div className="relative grid grid-cols-1 md:grid-cols-12 px-6 md:px-16 py-12 bg-black text-white overflow-hidden">
@@ -148,24 +91,32 @@ export default function FametonicLanding() {
 
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
+                  <div className="min-w-5 mt-1 text-yellow-400 hidden md:block">
+                    ✨
+                  </div>
                   <span>
                     Start growing your influence right away—no waiting required!
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
+                  <div className="min-w-5 mt-1 text-yellow-400 hidden md:block">
+                    ✨
+                  </div>
                   <span>
                     Create viral TikToks and Reels step by step with
                     easy-to-follow formats
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
+                  <div className="min-w-5 mt-1 text-yellow-400 hidden md:block">
+                    ✨
+                  </div>
                   <span>Use a Personal AI Writer to boost your content</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
+                  <div className="min-w-5 mt-1 text-yellow-400 hidden md:block">
+                    ✨
+                  </div>
                   <span>
                     Learn from expert-led courses designed for aspiring
                     influencers
