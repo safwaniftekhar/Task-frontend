@@ -189,7 +189,7 @@ export default function FametonicLanding() {
             </div>
 
             {/* Right Column - Overlapping Image */}
-            <div className="absolute right-0 top-0 md:block w-1.25/2 h-full flex items-center justify-end pr-16 pointer-events-none">
+            <div className="hidden md:block absolute  right-0 top-0 w-1.25/2 h-full items-center justify-end pr-16 pointer-events-none">
               <Image
                 src="/fametonic-app.png"
                 alt="Fametonic App"
