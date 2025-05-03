@@ -2,6 +2,8 @@ import Image from "next/image";
 import { ChevronRight, Menu } from "lucide-react";
 
 export default function FametonicLanding({ features }: { features: string[] }) {
+//
+
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <div className="w-full bg-gradient-to-r from-[#FC004E] to-[#10CBE0] py-2 px-4 text-center">
