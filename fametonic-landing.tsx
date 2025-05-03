@@ -98,7 +98,7 @@ export default function FametonicLanding({ features }: { features: string[] }) {
               </div>
               <div className="space-y-2">
                 <button
-                  className="w-[350px] h-[40px] bg-gradient-to-r !bg-red-500 text-white font-[urbanist] px-[40px] py-[8px] rounded-[10px] flex items-center gap-[10px] hover:opacity-90 transition-opacity justify-center"
+                  className="w-[90%] lg:w-[60%] h-[40px] bg-gradient-to-r !bg-red-500 text-white font-[urbanist] px-[40px] md:mr-[40%] py-[8px] rounded-[10px] flex items-center gap-[10px] hover:opacity-90 transition-opacity justify-center mx-auto"
                   style={{ filter: "drop-shadow(2px 2px 2px #00E7F9)" }}
                 >
                   <span className="font-[urbanist] font-bold text-[20px] leading-[100%] tracking-[0] align-middle">
@@ -106,8 +106,9 @@ export default function FametonicLanding({ features }: { features: string[] }) {
                   </span>
                   <ChevronRight className="h-4 w-4 ml-1" strokeWidth={5} />
                 </button>
-                <div className="w-[350px] flex justify-center">
-                  <p className="text-xs text-gray-400">
+
+                <div className="w-full lg:w-[60%] md:mr-[40%] flex justify-center mx-auto">
+                  <p className="text-xs text-gray-400 text-center">
                     1-minute quiz for personalized insights
                   </p>
                 </div>
