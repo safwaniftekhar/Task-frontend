@@ -1,23 +1,14 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight, ChevronRight, Menu } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ChevronRight, Menu } from "lucide-react";
 
 export default function FametonicLanding() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkIfMobile();
-    window.addEventListener("resize", checkIfMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkIfMobile);
-    };
-  }, []);
+  const features = [
+    "Start growing your influence right away—no waiting required!",
+    "Create viral TikToks and Reels step by step with easy-to-follow formats",
+    "Use a Personal AI Writer to boost your content",
+    "Learn from expert-led courses designed for aspiring influencers",
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
@@ -31,11 +22,9 @@ export default function FametonicLanding() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
-          <nav className="flex items-center justify-between px-6 md:px-16 mb-6 md:mb-16">
-            {/* Logo */}
+          <nav className="hidden md:flex items-center justify-between px-6 md:px-16 mb-6 md:mb-16">
             <div className="text-2xl flex font-bold">
               <Image
                 src="/fametonic-logo-final.png"
@@ -45,9 +34,7 @@ export default function FametonicLanding() {
                 className="h-8 md:h-12 w-auto"
               />
             </div>
-
-            {/* Nav links (desktop only) */}
-            <div className="hidden md:flex gap-6">
+            <div className="flex gap-6">
               <a href="#" className="text-gray-300 hover:text-white">
                 About us
               </a>
@@ -55,14 +42,27 @@ export default function FametonicLanding() {
                 Contact
               </a>
             </div>
+          </nav>
 
-            {/* Mobile menu button (hidden on desktop) */}
-            <div className="flex md:hidden">
+          <div className="flex ml-[40%] justify-between items-center w-[60%] px-4 md:hidden">
+            <nav className="flex items-center">
+              <div className="text-2xl flex font-bold">
+                <Image
+                  src="/fametonic-logo-final.png"
+                  alt="Fametonic"
+                  width={173.12}
+                  height={74}
+                  className="h-8 w-auto"
+                />
+              </div>
+            </nav>
+
+            <div className="flex items-center md:hidden">
               <button className="text-white">
                 <Menu size={24} />
               </button>
             </div>
-          </nav>
+          </div>
 
           <div className="md:hidden">
             <div className="relative flex justify-center ">
@@ -90,39 +90,21 @@ export default function FametonicLanding() {
               </h1>
 
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400 ">✨</div>
-                  <span>
-                    Start growing your influence right away—no waiting required!
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400  ">✨</div>
-                  <span>
-                    Create viral TikToks and Reels step by step with
-                    easy-to-follow formats
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400">✨</div>
-                  <span>Use a Personal AI Writer to boost your content</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="min-w-5 mt-1 text-yellow-400 ">✨</div>
-                  <span>
-                    Learn from expert-led courses designed for aspiring
-                    influencers
-                  </span>
-                </li>
+                {features.map((text, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="min-w-5 mt-1 text-yellow-400">✨</div>
+                    <span>{text}</span>
+                  </li>
+                ))}
               </ul>
 
-              <div className="md:hidden">
-                <p className="text-xs text-gray-500 mt-8">
+              <div className="md:hidden flex flex-col items-center text-center w-full  mt-8 space-y-2 text-gray-400">
+                <p className="font-medium text-[12px] leading-[100%] w-[70%] tracking-normal text-center align-middle font-[Figtree]">
                   By clicking "Get Started" you agree with Terms and Conditions,
-                  Privacy Policy, Subscription Agreement.
+                  Privacy Policy, Subscription Terms.
                 </p>
-                <p className="text-xs text-gray-500 mt-2">
-                  Fametonic © 2023 Rights Reserved
+                <p className="font-medium text-[12px] leading-[100%] w-[70%] tracking-normal p-4 text-center align-middle font-[Figtree]">
+                  Fametonic © 2025 All Rights Reserved.
                 </p>
               </div>
 
@@ -136,9 +118,11 @@ export default function FametonicLanding() {
                   </span>
                   <ChevronRight className="h-4 w-4 ml-1" strokeWidth={5} />
                 </button>
-                <p className="text-xs text-gray-400 text-left">
-                  1-minute quiz for personalized insights
-                </p>
+                <div className="w-[350px] flex justify-center">
+                  <p className="text-xs text-gray-400">
+                    1-minute quiz for personalized insights
+                  </p>
+                </div>
               </div>
 
               <div className="hidden sm:block">
